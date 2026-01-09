@@ -3,81 +3,529 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- SEO: Title tag updated for clarity and keywords -->
-    <title>Fix Your Shopify Sales | Expert Store Optimization | Olab Technologies</title>
-
-    <!-- SEO: Meta Description added to describe the page's purpose on Google -->
+    <title>Olab Technologies | High-Converting Websites in 7 Days</title>
     <meta name="description"
-        content="Is your Shopify store underperforming? Olab Technologies specializes in fixing sales funnels, optimizing for speed, and driving daily revenue. Stop flagging, start selling.">
+        content="Olab Technologies builds high-converting websites for local businesses and service providers in just 7 days. Get more leads, calls, and inquiries — not just a pretty website.">
+    <meta name="keywords"
+        content="website development, high converting websites, web design agency, lead generation websites, Olab Technologies, business websites">
+    <meta name="author" content="Olab Technologies">
+    <meta name="robots" content="index, follow">
 
-    <!-- NOTE: You have 'olab-one.com' here but your footer link is 'olab-tech.com'. Ensure this is your final, correct domain. -->
-    <link rel="canonical" href="https://www.olab-one.com/">
+    <link rel="canonical" href="https://olab-tech.com/">
 
-    <link rel="icon" href="icon/icon-Ol.ico" sizes="any">
-    <link rel="icon" href="icon/icon-Ol.ico" type="image/ico">
-    <link rel="apple-touch-icon" href="icon/icon-Ol.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-black-bg.png">
+    <link rel="apple-touch-icon" href="assets/icon-black-bg.png">
 
-    <!-- SEO: Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.olab-one.com/">
-
-    <!-- SEO: OG Title updated to be a compelling social media hook related to Shopify -->
-    <meta property="og:title" content="We Fix Shopify Stores That Don't Make Sales.">
-
-    <!-- SEO: OG Description added for social media sharing -->
+    <meta property="og:title" content="Olab Technologies | High-Converting Websites in 7 Days">
     <meta property="og:description"
-        content="Olab Technologies specializes in fixing sales funnels, optimizing for speed, and driving daily revenue. Stop flagging, start selling.">
-
-    <!-- NOTE: Ensure you create a 'social-preview.jpg' (1200x630px) that visually represents your headline. -->
-    <meta property="og:image" content="https://www.olab-one.com/social-preview.jpg">
+        content="We help businesses generate more leads with conversion-focused websites built in just 7 days.">
+    <meta property="og:image" content="https://olab-tech.com/assets/icon-black-bg.png">
+    <meta property="og:url" content="https://olab-tech.com/">
+    <meta property="og:site_name" content="Olab Technologies">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.olab-one.com/">
+    <meta name="twitter:title" content="Olab Technologies | High-Converting Websites in 7 Days">
+    <meta name="twitter:description" content="Conversion-focused websites that generate real business leads in 7 days.">
+    <meta name="twitter:image" content="https://olab-tech.com/assets/icon-black-bg.png">
 
-    <!-- SEO: Twitter Title updated to match the new OG Title -->
-    <meta name="twitter:title" content="We Fix Shopify Stores That Don't Make Sales.">
+    <meta name="theme-color" content="#1a1a1a">
 
-    <!-- SEO: Twitter Description added for social media sharing -->
-    <meta name="twitter:description"
-        content="Olab Technologies specializes in fixing sales funnels, optimizing for speed, and driving daily revenue. Stop flagging, start selling.">
+    <link rel="preconnect" href="https://www.instagram.com">
 
-    <!-- CORRECTED: Twitter image should be a large preview, not a tiny icon, for best results. Changed to match og:image. -->
-    <meta name="twitter:image" content="https://www.olab-one.com/social-preview.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 30px;
+            width: auto;
+            display: block;
+        }
+
+        .cta-button {
+            padding: 0.9rem 2rem;
+            background: linear-gradient(135deg, #313131 0%, #0e0e0e 100%);
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(252, 253, 254, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 5% 4rem;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+            /* fallback */
+        }
+
+        /* Video */
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            /* background: linear-gradient(135deg,
+                    rgba(240, 240, 240, 0.9),
+                    rgba(200, 200, 200, 0.75)); */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+
+            background: linear-gradient(135deg, #dbd6d6 0%, #efe3ba 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+            -webkit-text-stroke: 1.0px rgba(0, 0, 0, 0.45);
+
+            display: inline-block;
+            padding: 0.8rem 1.4rem;
+            border-radius: 18px;
+            background-color: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+
+            background: linear-gradient(135deg, #000000 0%, #ac9d6c 100%);
+            padding: 1.2rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.35);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .secondary-button {
+            padding: 0.9rem 2rem;
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .secondary-button:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1a1a1a;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .feature-card p {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: #4a5568;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 5%;
+            margin: 5rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-white {
+            background: white;
+            color: #667eea;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #000000, #000000);
+            color: #e5e5e5;
+            padding: 4rem 5% 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* subtle top divider glow */
+        .footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(to right,
+                    transparent,
+                    rgba(234, 192, 102, 0.6),
+                    transparent);
+        }
+
+        .footer p {
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        .footer a {
+            color: #eac066;
+            font-weight: 600;
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        /* animated underline */
+        .footer a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #eac066, #fff3c4);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .footer a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .footer-logo {
+            height: 44px;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .footer-social {
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .instagram-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* soften copyright text */
+        .footer-copy {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 5%;
+            }
+
+            .hero {
+                padding-top: 10rem;
+            }
+        }
+
+        #audit iframe {
+            min-height: 1100px;
+        }
+
+        @media (max-width: 768px) {
+            #audit iframe {
+                min-height: 1200px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="content">
-            <img src="icon/2.png" alt="Olab One Logo" class="logo" style="width: 190px;">
+    <nav class="nav">
+        <div class="logo">
+            <img src="assets/white-bg.png" alt="OLAB Technologies Logo">
+        </div>
 
-            <h1>If your Shopify store isn’t making daily sales that’s a 🚩 We fix that.</h1>
+        <button class="cta-button" onclick="openAuditForm()">Book Free Audit</button>
+    </nav>
 
-            <p class="subtitle">
-                We’re working behind the scenes!
-                Our website is getting its final touches and will be live very soon.
-                Thank you for your patience — exciting things are coming! 🚀
-            </p>
+    <section class="hero">
 
-            <div class="countdown">
-                <h2>SOON</h2>
-            </div>
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="assets/bg-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
+        <div class="hero-overlay"></div>
 
-            <div class="footer">
-                <p>A new product from the team at <a href="https://olab-tech.com" target="_blank">Olab Tech</a></p>
+        <div class="hero-content">
+            <h1>We Build High-Converting Websites<br>That Generate Leads in 7 Days</h1>
+            <h2>For local businesses & service providers who want more inquiries — not just a pretty website.</h2>
+            <div class="hero-buttons">
+                <button class="cta-button" onclick="openAuditForm()">Get a Free Website Audit</button>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script defer src="./script.js"></script>
+    <footer class="footer">
+        <!-- Logo -->
+        <img src="assets/black-bg.png" alt="Olab Technologies Logo" class="footer-logo">
+
+        <!-- Instagram -->
+        <div class="footer-social">
+            <a href="https://www.instagram.com/olab_softwares" target="_blank" aria-label="Olab Instagram">
+                <span>@olab_softwares</span>
+            </a>
+        </div>
+
+        <p class="footer-copy">&copy; 2023 - 2026 Olab Technologies. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        document.querySelectorAll('.cta-button, .secondary-button').forEach(button => {
+            button.addEventListener('mouseenter', function () {
+                this.style.transform = 'scale(1.05)';
+            });
+            button.addEventListener('mouseleave', function () {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+    <script>
+        function openAuditForm() {
+            window.location.href = "contact-form.html";
+        }
+    </script>
 </body>
 
 </html>
