@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Support | Olab Technologies</title>
+
+    <meta name="description"
+        content="Support page for Olab Technologies. Get help with services, projects, and Shopify & WooCommerce technical questions.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        creative: ['Unbounded', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            DEFAULT: '#6366F1',
+                            dark: '#4338CA'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-neutral-50 text-neutral-900">
+
+    <!-- HEADER -->
+    <header class="bg-white/70 backdrop-blur-md border-b border-neutral-200">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+
+            <a href="/" class="flex items-center">
+                <img src="assets/white-bg.png" alt="Olab Technologies Logo" class="h-8 w-auto object-contain" />
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <!-- <a href="#" class="hover:text-brand transition">About</a>
+                        <a href="#" class="hover:text-brand transition">Services</a>
+                        <a href="#" class="hover:text-brand transition">Contact</a> -->
+
+                <a href="#" class="ml-4 inline-flex items-center justify-center rounded-full
+                         bg-brand text-white
+                         px-5 py-2 text-sm font-medium
+                         shadow-sm shadow-brand/20
+                         hover:bg-brand-dark hover:shadow-md
+                         transition-all duration-300">
+                    Get Started
+                </a>
+            </nav>
+
+            <button id="menuBtn" class="md:hidden inline-flex items-center justify-center
+                       w-10 h-10 rounded-full
+                       bg-neutral-100 hover:bg-neutral-200
+                       active:scale-95 transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-neutral-200">
+            <nav class="flex flex-col px-4 py-4 space-y-3 text-sm font-medium">
+                <!-- <a href="#" class="hover:text-brand transition">About</a>
+                        <a href="#" class="hover:text-brand transition">Services</a>
+                        <a href="#" class="hover:text-brand transition">Contact</a> -->
+
+                <a href="#" class="mt-2 inline-flex items-center justify-center rounded-full
+                         bg-brand text-white
+                         px-5 py-2 font-medium
+                         shadow-sm hover:shadow-md
+                         hover:bg-brand-dark transition">
+                    Get Started
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="max-w-3xl mx-auto px-4 py-16">
+
+        <!-- PAGE TITLE -->
+        <h1 class="text-3xl md:text-4xl font-creative font-bold mb-4">
+            Support
+        </h1>
+
+        <p class="text-neutral-600 mb-10">
+            We believe support should be clear, fast, and practical.
+        </p>
+
+        <!-- CONTACT -->
+        <section class="mb-12">
+            <h2 class="text-xl font-semibold mb-3">How to Reach Us</h2>
+            <p class="text-neutral-700 mb-4">
+                For all support-related inquiries, contact us at:
+            </p>
+
+            <p class="text-neutral-900 font-medium">
+                📧
+                <a href="mailto:support@olab-tech.com" class="text-brand hover:underline">
+                    support@olab-tech.com
+                </a>
+            </p>
+        </section>
+
+        <!-- WHAT WE HELP WITH -->
+        <section class="mb-12">
+            <h2 class="text-xl font-semibold mb-3">What We Can Help With</h2>
+            <ul class="list-disc list-inside text-neutral-700 space-y-1">
+                <li>Questions about our services</li>
+                <li>Existing project support</li>
+                <li>Technical clarifications</li>
+                <li>Shopify & WooCommerce store-related issues (within scope)</li>
+            </ul>
+        </section>
+
+        <!-- RESPONSE TIME -->
+        <section class="mb-12">
+            <h2 class="text-xl font-semibold mb-3">Response Time</h2>
+            <p class="text-neutral-700 mb-3">We aim to respond within:</p>
+            <ul class="list-disc list-inside text-neutral-700 space-y-1">
+                <li>24–48 business hours for general inquiries</li>
+                <li>Faster response for active clients with ongoing projects</li>
+            </ul>
+        </section>
+
+        <!-- SCOPE -->
+        <section class="mb-12">
+            <h2 class="text-xl font-semibold mb-3">Scope of Support</h2>
+            <p class="text-neutral-700">
+                Support is provided based on your active agreement or project scope.
+                Requests outside scope may require additional review or billing.
+            </p>
+        </section>
+
+        <!-- BEFORE CONTACTING -->
+        <section class="mb-12">
+            <h2 class="text-xl font-semibold mb-3">Before Contacting Support</h2>
+            <p class="text-neutral-700 mb-3">
+                To help us respond faster, please include:
+            </p>
+            <ul class="list-disc list-inside text-neutral-700 space-y-1">
+                <li>Your name and business name</li>
+                <li>Relevant store URL</li>
+                <li>Clear description of the issue or request</li>
+            </ul>
+        </section>
+
+        <!-- PROMISE -->
+        <section class="border-t border-neutral-200 pt-8">
+            <h2 class="text-xl font-semibold mb-3">Our Promise</h2>
+            <p class="text-neutral-700">
+                No automated replies.<br />
+                No unnecessary delays.<br />
+                Just clear answers and clean execution.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-neutral-200 bg-white">
+        <div class="max-w-5xl mx-auto px-4 py-6 text-sm text-neutral-500 flex justify-between">
+            <p>© 2026 Olab Technologies. All rights reserved.</p>
+            <a href="/" class="hover:text-brand">Back to Home</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

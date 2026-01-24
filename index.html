@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern Header Footer</title>
+    <link rel="icon" type="image/png" href="https://www.olab-tech.com/assets/icon-black-bg.png">
+
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,6 +14,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SEO generic Start -->
+    <title> Shopify & WooCommerce Conversion Optimization Agency | Olab Technologies</title>
+
+    <!-- Meta Tags -->
+    <meta name="description"
+        content="Olab Technologies is a Shopify & WooCommerce conversion optimization agency focused on UX, performance, and revenue growth through clean execution.">
+
+    <meta name="keywords"
+        content="Shopify conversion optimization, WooCommerce optimization, eCommerce CRO agency, Shopify UX design, Olab Technologies">
+
+    <meta property="og:title" content="Shopify & WooCommerce Conversion Optimization Agency | Olab Technologies">
+    <meta property="og:description"
+        content="We design, optimize, and scale Shopify & WooCommerce stores with conversion-focused UX and clean execution.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.olab-tech.com/">
+    <meta property="og:image" content="https://www.olab-tech.com/assets/icon-black-bg.png">
+
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.olab-tech.com/">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shopify & WooCommerce CRO Agency | Olab Technologies">
+    <meta name="twitter:description"
+        content="Conversion-focused Shopify & WooCommerce execution that helps eCommerce brands sell more.">
+    <meta name="twitter:image" content="https://www.olab-tech.com/assets/icon-black-bg.png">
+
+
 
     <!-- Tailwind Config -->
     <script>
@@ -318,6 +349,95 @@
             transform: translateY(-4px);
         }
     </style>
+
+    <style>
+        /* BASE */
+        .case-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        /* IMAGE */
+        .case-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        /* CONTENT */
+        .case-content {
+            padding: 1.5rem;
+        }
+
+        .case-content span {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-content p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .case-content a {
+            font-weight: 600;
+        }
+
+        /* THEMES */
+        .case-content.dark {
+            background: #000;
+            color: #fff;
+        }
+
+        .case-content.dark span,
+        .case-content.dark a {
+            color: #a3e635;
+        }
+
+        .case-content.light span,
+        .case-content.light a {
+            color: #6366f1;
+        }
+
+        .case-card.solid {
+            background: #fed7aa;
+        }
+
+        .case-card.solid .case-content {
+            height: 100%;
+        }
+
+        /* ---------- DESKTOP ENHANCEMENTS ---------- */
+        @media (min-width: 768px) {
+            .case-card {
+                perspective: 1000px;
+                transition: transform 0.4s ease;
+            }
+
+            .case-card:hover {
+                transform: translateY(-6px);
+            }
+
+            .case-card:hover img {
+                transform: scale(1.06);
+            }
+
+            .case-card img {
+                transition: transform 0.6s ease;
+            }
+        }
+    </style>
 </head>
 
 <body class="min-h-screen flex flex-col bg-neutral-50 text-neutral-900 overflow-x-hidden">
@@ -325,8 +445,8 @@
     <header class="bg-white/70 backdrop-blur-md border-b border-neutral-200">
         <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
 
-            <a href="#" class="flex items-center">
-                <img src="assets/white-bg.png" alt="MyWebsite Logo" class="h-8 w-auto object-contain" />
+            <a href="/" class="flex items-center">
+                <img src="assets/white-bg.png" alt="Olab Technologies Logo" class="h-8 w-auto object-contain" />
             </a>
 
             <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -864,96 +984,64 @@
     <section class="bg-white py-20">
         <div class="max-w-6xl mx-auto px-4">
 
-            <!-- Section Title -->
             <h2 class="text-center text-4xl md:text-6xl font-creative font-bold text-neutral-900 mb-16">
                 Case Studies
             </h2>
 
-            <!-- Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-                <!-- Card 1 (Image + Overlay Content) -->
-                <article class="rounded-2xl overflow-hidden bg-neutral-900 text-white">
-                    <div class="relative h-full">
-                        <img src="assets/case/01.jpg" alt="" class="h-full w-full object-cover opacity-80">
-                        <div
-                            class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent">
-                            <span class="inline-block text-xs uppercase tracking-widest text-lime-300 mb-2">
-                                Product Design
-                            </span>
-                            <h3 class="text-xl font-semibold leading-snug">
-                                Streamline remote hiring with Pangea.ai’s marketplace
-                            </h3>
-                            <p class="mt-3 text-sm text-neutral-200">
-                                Struggling to find the perfect software development partner?
-                            </p>
-                            <a href="#" class="mt-4 text-sm font-semibold text-lime-300">
-                                Read more →
-                            </a>
-                        </div>
+                <!-- CARD 1 -->
+                <article class="case-card">
+                    <img src="assets/caseStudy/traffic.png" alt="">
+                    <div class="case-content dark">
+                        <span>Case Study</span>
+                        <h3>From Traffic to Sales:</h3>
+                        <p>Increasing AOV through Execution.</p>
+                        <a href="case-studies/from-traffic-to-sales-optimizing-product-pages-for-higher-aov.html">Read
+                            more →</a>
                     </div>
                 </article>
 
-                <!-- Card 2 (Text + Image Split) -->
-                <article class="grid grid-cols-1 sm:grid-cols-2 rounded-2xl overflow-hidden border border-neutral-200">
-                    <div class="p-8 flex flex-col justify-center">
-                        <span class="inline-block text-xs uppercase tracking-widest text-brand mb-2">
-                            Product Design
-                        </span>
-                        <h3 class="text-xl font-semibold text-neutral-900 leading-snug">
-                            Empowering Access to Fresh Produce: Building a Mobile App
-                        </h3>
-                        <p class="mt-3 text-sm text-neutral-600">
-                            An Amsterdam-based agtech startup transforming access to fresh produce.
-                        </p>
-                        <a href="#" class="mt-4 text-sm font-semibold text-brand">
-                            Read more →
-                        </a>
-                    </div>
-                    <img src="assets/case/02.jpg" alt="" class="h-full w-full object-cover">
-                </article>
-
-                <!-- Card 3 (Image First) -->
-                <article class="grid grid-cols-1 sm:grid-cols-2 rounded-2xl overflow-hidden border border-neutral-200">
-                    <img src="assets/case/03.jpg" alt="" class="h-full w-full object-cover grayscale">
-                    <div class="p-8 flex flex-col justify-center bg-neutral-50">
-                        <span class="inline-block text-xs uppercase tracking-widest text-brand mb-2">
-                            Product Design
-                        </span>
-                        <h3 class="text-xl font-semibold text-neutral-900 leading-snug">
-                            Java SDK for Security-Sensitive Products
-                        </h3>
-                        <p class="mt-3 text-sm text-neutral-600">
-                            Developing a specialized and security-sensitive Java SDK.
-                        </p>
-                        <a href="#" class="mt-4 text-sm font-semibold text-brand">
-                            Read more →
-                        </a>
+                <!-- CARD 2 -->
+                <article class="case-card">
+                    <img src="assets/caseStudy/10MilCaseStudy.png" alt="">
+                    <div class="case-content light">
+                        <span>Product Design</span>
+                        <h3>Redesigning a Mobile Experience for Real Users,</h3>
+                        <p>Not Desktop Mockups.</p>
+                        <a
+                            href="case-studies/redesigning-a-mobile-shopping-experience-for-real-users-not-desktop-mockups.html">Read
+                            more →</a>
                     </div>
                 </article>
 
-                <!-- Card 4 (Text on Color Block) -->
-                <article class="rounded-2xl overflow-hidden bg-orange-200 p-8 flex flex-col justify-between">
-                    <div>
-                        <span class="inline-block text-xs uppercase tracking-widest text-neutral-800 mb-2">
-                            Product Design
-                        </span>
-                        <h3 class="text-xl font-semibold text-neutral-900 leading-snug">
-                            The Imperative of Security
-                        </h3>
-                        <p class="mt-3 text-sm text-neutral-700">
-                            Exploring why security-first thinking is essential for modern products.
-                        </p>
+                <!-- CARD 3 -->
+                <article class="case-card">
+                    <img src="assets/caseStudy/mobileConversion.png" alt="">
+                    <div class="case-content light">
+                        <span>Technical Execution Case Study</span>
+                        <h3>Fixing Mobile UX Issues That Were</h3>
+                        <p>Killing Conversions..</p>
+                        <a href="case-studies/fixing-mobile-ux-issues-that-were-killing-conversions.html">Read more
+                            →</a>
                     </div>
-                    <a href="#" class="mt-6 text-sm font-semibold text-neutral-900">
-                        Read more →
-                    </a>
+                </article>
+
+                <!-- CARD 4 -->
+                <article class="case-card solid">
+                    <div class="case-content solid">
+                        <span>Revenue Growth Case Study</span>
+                        <h3>We Increased Conversion by 24%</h3>
+                        <p>for a $1.2M Shopify Store.</p>
+                        <a
+                            href="case-studies/we-increased-conversion-rate-on-a-1M-shopify-store-through-ux-first-redesign.html">Read
+                            more →</a>
+                    </div>
                 </article>
 
             </div>
         </div>
     </section>
-
 
     <!-- FOOTER -->
     <footer class="mt-auto bg-neutral-900 text-neutral-400">
@@ -961,7 +1049,7 @@
              flex flex-col md:flex-row
              items-center justify-between gap-4 text-sm">
 
-            <p>© 2026 MyWebsite. All rights reserved.</p>
+            <p>© 2026 Olab Technologies. All rights reserved.</p>
 
             <div class="flex space-x-4">
                 <a href="#" class="hover:text-brand transition">Privacy</a>
@@ -1007,6 +1095,18 @@
 
         runProcess();
         setInterval(runProcess, 2600);
+    </script>
+
+    <script>
+        document.querySelectorAll('.case-card').forEach(card => {
+            card.addEventListener('click', () => {
+                if (window.matchMedia('(hover: none)').matches) {
+                    document.querySelectorAll('.case-card')
+                        .forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                }
+            });
+        });
     </script>
 
 
