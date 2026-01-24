@@ -2,530 +2,1114 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="https://www.olab-tech.com/assets/icon-black-bg.png">
 
-    <title>Olab Technologies | High-Converting Websites in 7 Days</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Unbounded Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SEO generic Start -->
+    <title> Shopify & WooCommerce Conversion Optimization Agency | Olab Technologies</title>
+
+    <!-- Meta Tags -->
     <meta name="description"
-        content="Olab Technologies builds high-converting websites for local businesses and service providers in just 7 days. Get more leads, calls, and inquiries — not just a pretty website.">
+        content="Olab Technologies is a Shopify & WooCommerce conversion optimization agency focused on UX, performance, and revenue growth through clean execution.">
+
     <meta name="keywords"
-        content="website development, high converting websites, web design agency, lead generation websites, Olab Technologies, business websites">
-    <meta name="author" content="Olab Technologies">
-    <meta name="robots" content="index, follow">
+        content="Shopify conversion optimization, WooCommerce optimization, eCommerce CRO agency, Shopify UX design, Olab Technologies">
 
-    <link rel="canonical" href="https://olab-tech.com/">
-
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-black-bg.png">
-    <link rel="apple-touch-icon" href="assets/icon-black-bg.png">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Olab Technologies | High-Converting Websites in 7 Days">
+    <meta property="og:title" content="Shopify & WooCommerce Conversion Optimization Agency | Olab Technologies">
     <meta property="og:description"
-        content="We help businesses generate more leads with conversion-focused websites built in just 7 days.">
-    <meta property="og:image" content="https://olab-tech.com/assets/icon-black-bg.png">
-    <meta property="og:url" content="https://olab-tech.com/">
-    <meta property="og:site_name" content="Olab Technologies">
+        content="We design, optimize, and scale Shopify & WooCommerce stores with conversion-focused UX and clean execution.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.olab-tech.com/">
+    <meta property="og:image" content="https://www.olab-tech.com/assets/icon-black-bg.png">
 
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.olab-tech.com/">
+
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Olab Technologies | High-Converting Websites in 7 Days">
-    <meta name="twitter:description" content="Conversion-focused websites that generate real business leads in 7 days.">
-    <meta name="twitter:image" content="https://olab-tech.com/assets/icon-black-bg.png">
+    <meta name="twitter:title" content="Shopify & WooCommerce CRO Agency | Olab Technologies">
+    <meta name="twitter:description"
+        content="Conversion-focused Shopify & WooCommerce execution that helps eCommerce brands sell more.">
+    <meta name="twitter:image" content="https://www.olab-tech.com/assets/icon-black-bg.png">
 
-    <meta name="theme-color" content="#1a1a1a">
 
-    <link rel="preconnect" href="https://www.instagram.com">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        creative: ['Unbounded', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#EEF2FF',
+                            DEFAULT: '#6366F1',
+                            dark: '#4338CA'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .client-card {
+            @apply flex items-center justify-center h-24 rounded-xl bg-white border border-neutral-200 shadow-sm;
+        }
+
+        .client-logo {
+            @apply max-h-10 w-auto object-contain grayscale opacity-80 transition;
+        }
+
+        .client-card:hover .client-logo {
+            @apply grayscale-0 opacity-100;
+        }
+
+        @keyframes scrollY {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+
+        .animate-scroll-slow {
+            animation: scrollY 30s linear infinite;
+        }
+
+        .animate-scroll-medium {
+            animation: scrollY 24s linear infinite;
+        }
+
+        .animate-scroll-fast {
+            animation: scrollY 18s linear infinite;
+        }
+
+        .animate-scroll-slower {
+            animation: scrollY 36s linear infinite;
+        }
+    </style>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .client-card {
+            @apply flex items-center justify-center h-24 rounded-xl bg-white border border-neutral-200 shadow-sm;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            overflow-x: hidden;
+        .client-logo {
+            @apply max-h-10 w-auto object-contain grayscale opacity-80 transition;
         }
 
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 5%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        .client-card:hover .client-logo {
+            @apply grayscale-0 opacity-100;
+        }
+    </style>
+
+    <style>
+        /* PROCESS STEP BASE */
+        .process-step {
+            opacity: 0.5;
+            transform: translateY(8px);
+            transition: all 0.5s ease;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
+        .process-step.active {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .logo img {
-            height: 30px;
-            width: auto;
-            display: block;
-        }
-
-        .cta-button {
-            padding: 0.9rem 2rem;
-            background: linear-gradient(135deg, #313131 0%, #0e0e0e 100%);
-            color: rgb(255, 255, 255);
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(252, 253, 254, 0.3);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
-        }
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 8rem 5% 4rem;
-            position: relative;
-            overflow: hidden;
-            background: #000;
-            /* fallback */
-        }
-
-        /* Video */
-        .hero-video {
+        /* PROCESS DOT (shared desktop + mobile) */
+        .process-dot {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-            z-index: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 9999px;
+            background: #6366F1;
+            /* brand */
+            box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.6);
+            transition: all 0.4s ease;
         }
 
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            /* background: linear-gradient(135deg,
-                    rgba(240, 240, 240, 0.9),
-                    rgba(200, 200, 200, 0.75)); */
-            z-index: 1;
+        /* Desktop dot position */
+        @media (min-width: 768px) {
+            .process-dot {
+                top: 0;
+                left: 0;
+            }
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
+        /* Mobile dot position (vertical timeline) */
+        @media (max-width: 767px) {
+            .process-dot {
+                top: 0;
+                left: 0;
+            }
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
-            top: -200px;
-            right: -200px;
-            animation: float 6s ease-in-out infinite;
+        /* Active glow */
+        .process-step.active .process-dot {
+            background: #A78BFA;
+            animation: pulse 1.5s infinite;
         }
 
-        @keyframes float {
+        /* Pulse animation */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.6);
+            }
 
-            0%,
+            70% {
+                box-shadow: 0 0 0 14px rgba(167, 139, 250, 0);
+            }
+
             100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-20px);
+                box-shadow: 0 0 0 0 rgba(167, 139, 250, 0);
             }
         }
 
-        .hero-content {
-            max-width: 1200px;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-
-            background: linear-gradient(135deg, #dbd6d6 0%, #efe3ba 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-
-            -webkit-text-stroke: 1.0px rgba(0, 0, 0, 0.45);
-
-            display: inline-block;
-            padding: 0.8rem 1.4rem;
-            border-radius: 18px;
-            background-color: rgba(255, 255, 255, 0.85);
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-        }
-
-        .hero h2 {
-            font-size: 1.5rem;
+        /* MOBILE TEXT STYLES */
+        .process-mobile h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
             color: #ffffff;
-            font-weight: 500;
-            margin-bottom: 2.5rem;
-            max-width: 760px;
-            margin-left: auto;
-            margin-right: auto;
-
-            background: linear-gradient(135deg, #000000 0%, #ac9d6c 100%);
-            padding: 1.2rem 2rem;
-            border-radius: 20px;
-            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.35);
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
         }
 
-        .hero-buttons {
+        .process-mobile p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #a1a1aa;
+            transition: color 0.3s ease;
+        }
+
+        /* Active mobile text */
+        .process-mobile.active h3 {
+            color: #c4b5fd;
+        }
+
+        .process-mobile.active p {
+            color: #e5e7eb;
+        }
+    </style>
+
+
+    <style>
+        .auto-glow {
+            position: relative;
+            transition: all 0.3s ease;
+            animation: glowFlow 4s infinite ease-in-out;
+        }
+
+        /* Glow animation */
+        @keyframes glowFlow {
+            0% {
+                box-shadow: 0 0 0 rgba(99, 102, 241, 0);
+                border-color: #e5e7eb;
+                transform: translateY(0);
+            }
+
+            20% {
+                box-shadow: 0 0 40px rgba(99, 102, 241, 0.35);
+                border-color: rgb(99, 102, 241);
+                transform: translateY(-4px);
+            }
+
+            40% {
+                box-shadow: 0 0 0 rgba(99, 102, 241, 0);
+                border-color: #e5e7eb;
+                transform: translateY(0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 rgba(99, 102, 241, 0);
+                border-color: #e5e7eb;
+            }
+        }
+
+        /* Staggered flow */
+        .glow-1 {
+            animation-delay: 0s;
+        }
+
+        .glow-2 {
+            animation-delay: 1s;
+        }
+
+        .glow-3 {
+            animation-delay: 2s;
+        }
+
+        .glow-4 {
+            animation-delay: 3s;
+        }
+
+        /* Hover overrides auto glow */
+        .auto-glow:hover {
+            animation-play-state: paused;
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.35);
+            border-color: rgb(99, 102, 241);
+            transform: translateY(-6px);
+        }
+    </style>
+    <style>
+        .tech-card {
             display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .secondary-button {
-            padding: 0.9rem 2rem;
-            background: white;
-            color: #667eea;
-            border: 2px solid #667eea;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .secondary-button:hover {
-            background: #667eea;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .section {
-            padding: 5rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #1a1a1a;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(102, 126, 234, 0.1);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.15);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #1a1a1a;
-        }
-
-        .feature-card p {
-            color: #4a5568;
-            line-height: 1.7;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-            text-align: center;
-        }
-
-        .stat {
-            padding: 2rem;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .stat-label {
-            color: #4a5568;
-            font-weight: 600;
-            margin-top: 0.5rem;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            padding: 5rem 5%;
-            margin: 5rem 0;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .cta-white {
-            background: white;
-            color: #667eea;
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .cta-white:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .footer {
-            background: linear-gradient(135deg, #000000, #000000);
-            color: #e5e5e5;
-            padding: 4rem 5% 3rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* subtle top divider glow */
-        .footer::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            height: 1px;
-            background: linear-gradient(to right,
-                    transparent,
-                    rgba(234, 192, 102, 0.6),
-                    transparent);
-        }
-
-        .footer p {
-            margin-bottom: 0.6rem;
-            font-size: 0.95rem;
-            opacity: 0.85;
-        }
-
-        .footer a {
-            color: #eac066;
-            font-weight: 600;
-            text-decoration: none;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        /* animated underline */
-        .footer a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #eac066, #fff3c4);
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.3s ease;
-        }
-
-        .footer a:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-
-        .footer-logo {
-            height: 44px;
-            margin-bottom: 1.5rem;
-            opacity: 0.95;
-        }
-
-        .footer-social {
-            margin-bottom: 1.2rem;
-        }
-
-        .footer-social a {
-            display: inline-flex;
+            flex-direction: column;
             align-items: center;
-            gap: 0.5rem;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-radius: 0.75rem;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+        }
+
+        .auto-glow-tech {
+            animation: techGlowFlow 8s infinite ease-in-out;
+            transition: all 0.3s ease;
+        }
+
+        /* Softer glow */
+        @keyframes techGlowFlow {
+            0% {
+                box-shadow: 0 0 0 rgba(99, 102, 241, 0);
+                border-color: #e5e7eb;
+                transform: translateY(0);
+            }
+
+            15% {
+                box-shadow: 0 0 25px rgba(99, 102, 241, 0.25);
+                border-color: rgb(99, 102, 241);
+                transform: translateY(-2px);
+            }
+
+            30% {
+                box-shadow: 0 0 0 rgba(99, 102, 241, 0);
+                border-color: #e5e7eb;
+                transform: translateY(0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 rgba(99, 102, 241, 0);
+            }
+        }
+
+        /* Staggered flow */
+        .glow-1 {
+            animation-delay: 0s;
+        }
+
+        .glow-2 {
+            animation-delay: 1s;
+        }
+
+        .glow-3 {
+            animation-delay: 2s;
+        }
+
+        .glow-4 {
+            animation-delay: 3s;
+        }
+
+        .glow-5 {
+            animation-delay: 4s;
+        }
+
+        .glow-6 {
+            animation-delay: 5s;
+        }
+
+        .glow-7 {
+            animation-delay: 6s;
+        }
+
+        .glow-8 {
+            animation-delay: 7s;
+        }
+
+        /* Hover overrides auto glow */
+        .auto-glow-tech:hover {
+            animation-play-state: paused;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+            border-color: rgb(99, 102, 241);
+            transform: translateY(-4px);
+        }
+    </style>
+
+    <style>
+        /* BASE */
+        .case-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        /* IMAGE */
+        .case-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        /* CONTENT */
+        .case-content {
+            padding: 1.5rem;
+        }
+
+        .case-content span {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-content p {
             font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
         }
 
-        .instagram-icon {
-            width: 20px;
-            height: 20px;
+        .case-content a {
+            font-weight: 600;
         }
 
-        /* soften copyright text */
-        .footer-copy {
-            font-size: 0.85rem;
-            opacity: 0.7;
+        /* THEMES */
+        .case-content.dark {
+            background: #000;
+            color: #fff;
         }
 
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero h2 {
-                font-size: 1.2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .nav {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem 5%;
-            }
-
-            .hero {
-                padding-top: 10rem;
-            }
+        .case-content.dark span,
+        .case-content.dark a {
+            color: #a3e635;
         }
 
-        #audit iframe {
-            min-height: 1100px;
+        .case-content.light span,
+        .case-content.light a {
+            color: #6366f1;
         }
 
-        @media (max-width: 768px) {
-            #audit iframe {
-                min-height: 1200px;
+        .case-card.solid {
+            background: #fed7aa;
+        }
+
+        .case-card.solid .case-content {
+            height: 100%;
+        }
+
+        /* ---------- DESKTOP ENHANCEMENTS ---------- */
+        @media (min-width: 768px) {
+            .case-card {
+                perspective: 1000px;
+                transition: transform 0.4s ease;
+            }
+
+            .case-card:hover {
+                transform: translateY(-6px);
+            }
+
+            .case-card:hover img {
+                transform: scale(1.06);
+            }
+
+            .case-card img {
+                transition: transform 0.6s ease;
             }
         }
     </style>
 </head>
 
-<body>
-    <nav class="nav">
-        <div class="logo">
-            <img src="assets/white-bg.png" alt="OLAB Technologies Logo">
+<body class="min-h-screen flex flex-col bg-neutral-50 text-neutral-900 overflow-x-hidden">
+    <!-- HEADER -->
+    <header class="bg-white/70 backdrop-blur-md border-b border-neutral-200">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+
+            <a href="/" class="flex items-center">
+                <img src="assets/white-bg.png" alt="Olab Technologies Logo" class="h-8 w-auto object-contain" />
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <!-- <a href="#" class="hover:text-brand transition">About</a>
+                <a href="#" class="hover:text-brand transition">Services</a>
+                <a href="#" class="hover:text-brand transition">Contact</a> -->
+
+                <a href="#" class="ml-4 inline-flex items-center justify-center rounded-full
+                 bg-brand text-white
+                 px-5 py-2 text-sm font-medium
+                 shadow-sm shadow-brand/20
+                 hover:bg-brand-dark hover:shadow-md
+                 transition-all duration-300">
+                    Get Started
+                </a>
+            </nav>
+
+            <button id="menuBtn" class="md:hidden inline-flex items-center justify-center
+               w-10 h-10 rounded-full
+               bg-neutral-100 hover:bg-neutral-200
+               active:scale-95 transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
         </div>
 
-        <button class="cta-button" onclick="openAuditForm()">Book Free Audit</button>
-    </nav>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-neutral-200">
+            <nav class="flex flex-col px-4 py-4 space-y-3 text-sm font-medium">
+                <!-- <a href="#" class="hover:text-brand transition">About</a>
+                <a href="#" class="hover:text-brand transition">Services</a>
+                <a href="#" class="hover:text-brand transition">Contact</a> -->
 
-    <section class="hero">
+                <a href="#" class="mt-2 inline-flex items-center justify-center rounded-full
+                 bg-brand text-white
+                 px-5 py-2 font-medium
+                 shadow-sm hover:shadow-md
+                 hover:bg-brand-dark transition">
+                    Get Started
+                </a>
+            </nav>
+        </div>
+    </header>
 
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="assets/bg-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <!-- HERO -->
+    <section class="relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 pt-24 pb-12 text-center relative z-10">
 
-        <div class="hero-overlay"></div>
 
-        <div class="hero-content">
-            <h1>We Build High-Converting Websites<br>That Generate Leads in 7 Days</h1>
-            <h2>For local businesses & service providers who want more inquiries — not just a pretty website.</h2>
-            <div class="hero-buttons">
-                <button class="cta-button" onclick="openAuditForm()">Get a Free Website Audit</button>
+            <p class="text-sm md:text-base font-medium text-neutral-600">
+                We only know one thing.
+            </p>
+
+            <h1 class="mt-6 font-creative font-extrabold
+               text-5xl md:text-6xl lg:text-7xl
+               leading-tight tracking-tight">
+                <span class="text-neutral-900">Creative</span>
+                <span class="block mt-2 bg-clip-text text-transparent
+                 bg-gradient-to-r from-brand to-brand-dark">
+                    Execution
+                </span>
+            </h1>
+
+            <p class="mt-8 text-lg md:text-xl text-neutral-700 font-medium">
+                Shopify & WooCommerce stores that convert.
+                <span class="text-neutral-900 font-semibold">
+                    We design, build, and optimize!
+                </span>
+            </p>
+
+            <p class="mt-6 max-w-2xl mx-auto text-sm md:text-base text-neutral-600">
+                For <span class="font-semibold text-brand">3+ years</span>, we’ve only
+                focused on creative execution.
+                No fluff. No guesswork.
+                <br class="hidden md:block" />
+                Just execution that helps you sell more.
+            </p>
+
+            <!-- Authority Proof -->
+            <div class="mt-10 flex justify-center">
+                <div class="inline-flex items-center gap-3
+                            rounded-full border border-neutral-200
+                            bg-white/70 backdrop-blur
+                            px-6 py-3
+                            text-sm md:text-base
+                            text-neutral-700
+                            shadow-sm">
+
+                    <span class="relative inline-flex h-2.5 w-2.5">
+                        <span
+                            class="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping"></span>
+                        <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500"></span>
+                    </span>
+
+
+                    <span>
+                        We manage stores with
+                        <span class="font-semibold text-neutral-900">
+                            $1M+ annual revenue
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="mt-12 flex justify-center">
+                <a href="#" class="inline-flex items-center justify-center rounded-full
+                 bg-neutral-900 text-white
+                 px-10 py-4 text-sm font-semibold
+                 hover:bg-neutral-800
+                 transition-all duration-300">
+                    Talk to Us
+                </a>
+            </div>
+        </div>
+        <!-- Background accents -->
+        <div class="absolute -top-40 -left-40 h-[500px] w-[500px]
+             rounded-full bg-brand/15 blur-3xl"></div>
+        <div class="absolute top-1/3 -right-40 h-[500px] w-[500px]
+             rounded-full bg-brand-dark/15 blur-3xl"></div>
+    </section>
+
+    <!-- CLIENTS SECTION -->
+    <section class="relative bg-neutral-50 overflow-hidden py-12">
+        <div class="absolute -top-40 -left-40 h-[500px] w-[500px]
+           rounded-full blur-3xl
+           bg-brand/20 transition-all duration-700">
+        </div>
+
+        <div class="max-w-2xl mx-auto text-center mb-6">
+            <p class="text-sm uppercase tracking-widest text-neutral-500 font-semibold">
+                Trusted By
+            </p>
+            <h2 class="mt-3 text-3xl md:text-4xl font-creative font-bold text-neutral-900">
+                Global Brands & Growing Companies
+            </h2>
+        </div>
+
+        <div class="relative">
+            <!-- Carousel -->
+            <div class="flex gap-6 overflow-x-auto snap-x snap-mandatory
+                        py-8 px-4 justify-center">
+
+                <!-- 8x8 -->
+                <div class="group snap-center shrink-0 w-48 h-28 rounded-xl
+                           flex items-center justify-center
+                           bg-neutral-100
+                           transition-all duration-300
+                           hover:scale-105 hover:bg-sky-600
+                           active:scale-100 cursor-pointer">
+                    <img src="assets/clients/8x8.png" alt="8x8" class="max-h-16 object-contain
+                                transition duration-300
+                                group-hover:scale-110">
+                </div>
+
+                <!-- CAT -->
+                <div class="group snap-center shrink-0 w-48 h-28 rounded-xl
+                           flex items-center justify-center
+                           bg-neutral-100
+                           transition-all duration-300
+                           hover:scale-105 hover:bg-sky-600
+                           cursor-pointer">
+                    <img src="assets/clients/cat.png" alt="CAT" class="max-h-16 object-contain
+                                transition duration-300
+                                group-hover:scale-110">
+                </div>
+
+                <!-- Zardozi -->
+                <div class="group snap-center shrink-0 w-48 h-28 rounded-xl
+                           flex items-center justify-center
+                           bg-neutral-100
+                           transition-all duration-300
+                           hover:scale-105 hover:bg-sky-600
+                           cursor-pointer">
+                    <img src="assets/zardoz.png" alt="Zardozi" class="max-h-16 object-contain
+                                transition duration-300
+                                group-hover:scale-110">
+                </div>
+
+                <!-- Sara Jeweler -->
+                <div class="group snap-center shrink-0 w-48 h-28 rounded-xl
+                           flex items-center justify-center
+                           bg-neutral-100
+                           transition-all duration-300
+                           hover:scale-105 hover:bg-sky-600
+                           cursor-pointer">
+                    <img src="assets/sara-jeweler.png" alt="Sara Jeweler" class="max-h-16 object-contain
+                                transition duration-300
+                                group-hover:scale-110">
+                </div>
+
+                <!-- Disang Foods -->
+                <div class="group snap-center shrink-0 w-48 h-28 rounded-xl
+                           flex items-center justify-center
+                           bg-neutral-100
+                           transition-all duration-300
+                           hover:scale-105 hover:bg-sky-600
+                           cursor-pointer">
+                    <img src="assets/disang-foods.jpg" alt="Disang Foods" class="max-h-16 object-contain
+                                transition duration-300
+                                group-hover:scale-110">
+                </div>
+
+                <!-- Sokai -->
+                <div class="group snap-center shrink-0 w-48 h-28 rounded-xl
+                           flex items-center justify-center
+                           bg-neutral-100
+                           transition-all duration-300
+                           hover:scale-105 hover:bg-sky-600
+                           cursor-pointer">
+                    <img src="assets/sokai.png" alt="Sokai" class="max-h-16 object-contain
+                                transition duration-300
+                                group-hover:scale-110">
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Fade masks -->
+        <div class="pointer-events-none absolute top-0 left-0 w-full h-20
+                bg-gradient-to-b from-neutral-50 to-transparent"></div>
+        <div class="pointer-events-none absolute bottom-0 left-0 w-full h-20
+                bg-gradient-to-t from-neutral-50 to-transparent"></div>
+    </section>
+
+
+    <!-- WHAT WE ACTUALLY DO / SERVICES SECTION -->
+    <section class="relative bg-neutral-50 mb-6 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+
+            <!-- Section Header -->
+            <div class="max-w-2xl mx-auto text-center mb-12">
+                <p class="text-sm uppercase tracking-widest text-neutral-500 font-semibold">
+                    What We Actually Do
+                </p>
+
+                <h2 class="mt-3 text-3xl md:text-4xl font-creative font-bold text-neutral-900">
+                    What We Help You Improve
+                </h2>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+                <div class="group auto-glow glow-1 p-6 rounded-2xl bg-white border border-neutral-200 cursor-pointer">
+                    <h3 class="text-lg font-semibold text-neutral-900 mb-2 group-hover:text-brand">
+                        Store Performance
+                    </h3>
+                    <p class="text-neutral-600 text-sm md:text-base leading-relaxed">
+                        Faster load times, cleaner structure, and smoother interactions that keep shoppers from
+                        bouncing.
+                    </p>
+                </div>
+
+                <div class="group auto-glow glow-2 p-6 rounded-2xl bg-white border border-neutral-200 cursor-pointer">
+                    <h3 class="text-lg font-semibold text-neutral-900 mb-2 group-hover:text-brand">
+                        Conversion-Focused UX
+                    </h3>
+                    <p class="text-neutral-600 text-sm md:text-base leading-relaxed">
+                        Product pages, cart, and checkout optimized to reduce friction and help visitors complete
+                        purchases.
+                    </p>
+                </div>
+
+                <div class="group auto-glow glow-3 p-6 rounded-2xl bg-white border border-neutral-200 cursor-pointer">
+                    <h3 class="text-lg font-semibold text-neutral-900 mb-2 group-hover:text-brand">
+                        Mobile Shopping Experience
+                    </h3>
+                    <p class="text-neutral-600 text-sm md:text-base leading-relaxed">
+                        Designed for thumb-first users on real devices — not just desktop previews.
+                    </p>
+                </div>
+
+                <div class="group auto-glow glow-4 p-6 rounded-2xl bg-white border border-neutral-200 cursor-pointer">
+                    <h3 class="text-lg font-semibold text-neutral-900 mb-2 group-hover:text-brand">
+                        Store Improvements & Scaling
+                    </h3>
+                    <p class="text-neutral-600 text-sm md:text-base leading-relaxed">
+                        High-impact landing pages, CRO tweaks, and Shopify/WooCommerce enhancements that support growth.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Bottom Note -->
+            <p class="mt-12 max-w-3xl mx-auto text-center text-neutral-600 text-sm md:text-base">
+                We focus on improvements that directly impact user experience and sales — not unnecessary features.
+            </p>
+
+        </div>
+    </section>
+
+
+    <section class="relative bg-[#0B0F1A] py-20 overflow-hidden">
+
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+
+            <!-- Section Header -->
+            <div class="max-w-2xl mx-auto text-center mb-16">
+                <p class="text-sm uppercase tracking-widest text-neutral-400 font-semibold">
+                    How It Works
+                </p>
+                <h2 class="mt-3 text-3xl md:text-4xl font-creative font-bold text-white">
+                    How We Work
+                </h2>
+            </div>
+
+            <!-- PROCESS FLOW (Desktop) -->
+            <div class="hidden md:grid grid-cols-4 gap-10 relative">
+
+                <!-- Base Line -->
+                <div class="absolute top-6 left-0 w-full h-[2px] bg-neutral-700"></div>
+
+                <!-- Animated Progress Line -->
+                <div id="processLine" class="absolute top-6 left-0 h-[2px] w-0
+               bg-gradient-to-r from-brand via-purple-400 to-brand-dark
+               transition-all duration-700">
+                </div>
+
+                <!-- Step 1 -->
+                <div class="relative process-step" data-step="0">
+                    <div class="process-dot"></div>
+                    <h3 class="mt-10 text-lg font-semibold text-white">
+                        Quick Store Review
+                    </h3>
+                    <p class="mt-3 text-sm text-neutral-400">
+                        We review your Shopify or WooCommerce store to identify high-impact issues
+                        affecting usability and conversions.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative process-step" data-step="1">
+                    <div class="process-dot"></div>
+                    <h3 class="mt-10 text-lg font-semibold text-white">
+                        Clear Recommendations
+                    </h3>
+                    <p class="mt-3 text-sm text-neutral-400">
+                        You receive a simple, easy-to-understand breakdown of what’s holding your
+                        store back — and what to fix first.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative process-step" data-step="2">
+                    <div class="process-dot"></div>
+                    <h3 class="mt-10 text-lg font-semibold text-white">
+                        Execution
+                    </h3>
+                    <p class="mt-3 text-sm text-neutral-400">
+                        We implement the improvements cleanly and efficiently, with testing across
+                        devices and browsers.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative process-step" data-step="3">
+                    <div class="process-dot"></div>
+                    <h3 class="mt-10 text-lg font-semibold text-white">
+                        Results & Optimization
+                    </h3>
+                    <p class="mt-3 text-sm text-neutral-400">
+                        We refine and optimize based on performance and real user behavior to ensure
+                        lasting improvements.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- PROCESS FLOW (Mobile) -->
+            <div class="md:hidden relative max-w-md mx-auto pl-6">
+
+                <!-- Vertical Base Line -->
+                <div class="absolute left-2 top-0 h-full w-[2px] bg-neutral-700"></div>
+
+                <!-- Animated Vertical Line -->
+                <div id="processLineMobile" class="absolute left-2 top-0 w-[2px] h-0
+                            bg-gradient-to-b from-brand via-purple-400 to-brand-dark
+                            transition-all duration-700">
+                </div>
+
+                <!-- Step 1 -->
+                <div class="relative process-step process-mobile mb-12" data-step="0">
+                    <span class="process-dot -left-[6px] top-1"></span>
+                    <h3>Quick Store Review</h3>
+                    <p>
+                        We review your Shopify or WooCommerce store to identify high-impact issues
+                        affecting usability and conversions.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative process-step process-mobile mb-12" data-step="1">
+                    <span class="process-dot -left-[6px] top-1"></span>
+                    <h3>Clear Recommendations</h3>
+                    <p>
+                        You receive a simple, easy-to-understand breakdown of what’s holding your
+                        store back — and what to fix first.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative process-step process-mobile mb-12" data-step="2">
+                    <span class="process-dot -left-[6px] top-1"></span>
+                    <h3>Execution</h3>
+                    <p>
+                        We implement the improvements cleanly and efficiently, with testing across
+                        devices and browsers.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative process-step process-mobile" data-step="3">
+                    <span class="process-dot -left-[6px] top-1"></span>
+                    <h3>Results & Optimization</h3>
+                    <p>
+                        We refine and optimize based on performance and real user behavior to ensure
+                        lasting improvements.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Bottom Statement -->
+            <p class="mt-16 text-center text-neutral-400 text-sm md:text-base">
+                Clear process. Clean execution. No guesswork.
+            </p>
+
+        </div>
+
+        <!-- Ambient Glow -->
+        <div class="absolute -top-40 -right-40
+             w-[260px] h-[260px]
+             sm:w-[360px] sm:h-[360px]
+             md:w-[500px] md:h-[500px]
+             rounded-full bg-brand/20 blur-3xl">
+        </div>
+
+        <div class="absolute top-1/3 -right-40 h-[500px] w-[500px]
+           rounded-full bg-brand-dark/20 blur-3xl">
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT / TECHNOLOGIES SECTION -->
+    <section class="relative bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+
+            <div class="max-w-2xl mx-auto text-center mb-12">
+                <p class="text-sm uppercase tracking-widest text-neutral-500 font-semibold">
+                    About Our Agency
+                </p>
+
+                <h2 class="mt-3 text-3xl md:text-4xl font-creative font-bold text-neutral-900">
+                    Technologies We Work With
+                </h2>
+
+                <p class="mt-3 text-neutral-600 text-base md:text-lg">
+                    We don’t chase trends. We work with proven technologies that help us
+                    build fast, scalable, and conversion-focused digital experiences.
+                </p>
+            </div>
+
+            <!-- Tech Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+
+                <div class="group auto-glow-tech glow-1 tech-card">
+                    <img src="assets/tech/html.png" alt="HTML" class="max-h-16 object-contain mb-3">
+                    <span class="font-medium text-neutral-800 group-hover:text-brand">
+                        HTML5
+                    </span>
+                </div>
+
+                <div class="group auto-glow-tech glow-2 tech-card">
+                    <img src="assets/tech/text.png" alt="CSS" class="max-h-16 object-contain mb-3">
+                    <span class="font-medium text-neutral-800 group-hover:text-brand">
+                        CSS3
+                    </span>
+                </div>
+
+                <div class="group auto-glow-tech glow-3 tech-card">
+                    <img src="assets/tech/js.png" alt="JavaScript" class="max-h-16 object-contain mb-3">
+                    <span class="font-medium text-neutral-800 group-hover:text-brand">
+                        JavaScript
+                    </span>
+                </div>
+
+                <div class="group auto-glow-tech glow-4 tech-card">
+                    <img src="assets/tech/science.png" alt="React" class="max-h-16 object-contain mb-3">
+                    <span class="font-medium text-neutral-800 group-hover:text-brand">
+                        React
+                    </span>
+                </div>
+
+                <div class="group auto-glow-tech glow-5 tech-card">
+                    <img src="assets/tech/java.png" alt="Java" class="max-h-16 object-contain mb-3">
+                    <span class="font-medium text-neutral-800 group-hover:text-brand">
+                        Java
+                    </span>
+                </div>
+
+                <div class="group auto-glow-tech glow-6 tech-card">
+                    <img src="assets/tech/social.png" alt="Shopify" class="max-h-16 object-contain mb-3">
+                    <span class="font-medium text-neutral-800 group-hover:text-brand">
+                        Shopify
+                    </span>
+                </div>
+
+                <div class="group auto-glow-tech glow-7 tech-card">
+                    <img src="assets/tech/wordpress.png" alt="WooCommerce" class="max-h-16 object-contain mb-3">
+                    <span class="font-medium text-neutral-800 group-hover:text-brand">
+                        WooCommerce
+                    </span>
+                </div>
+
+                <div class="group auto-glow-tech glow-8 tech-card">
+                    <img src="assets/tech/figma.png" alt="Figma" class="max-h-16 object-contain mb-3">
+                    <span class="font-medium text-neutral-800 group-hover:text-brand">
+                        Figma
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CASE STUDIES SECTION -->
+    <section class="bg-white py-20">
+        <div class="max-w-6xl mx-auto px-4">
+
+            <h2 class="text-center text-4xl md:text-6xl font-creative font-bold text-neutral-900 mb-16">
+                Case Studies
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                <!-- CARD 1 -->
+                <article class="case-card">
+                    <img src="assets/caseStudy/traffic.png" alt="">
+                    <div class="case-content dark">
+                        <span>Case Study</span>
+                        <h3>From Traffic to Sales:</h3>
+                        <p>Increasing AOV through Execution.</p>
+                        <a href="case-studies/from-traffic-to-sales-optimizing-product-pages-for-higher-aov.html">Read
+                            more →</a>
+                    </div>
+                </article>
+
+                <!-- CARD 2 -->
+                <article class="case-card">
+                    <img src="assets/caseStudy/10MilCaseStudy.png" alt="">
+                    <div class="case-content light">
+                        <span>Product Design</span>
+                        <h3>Redesigning a Mobile Experience for Real Users,</h3>
+                        <p>Not Desktop Mockups.</p>
+                        <a
+                            href="case-studies/redesigning-a-mobile-shopping-experience-for-real-users-not-desktop-mockups.html">Read
+                            more →</a>
+                    </div>
+                </article>
+
+                <!-- CARD 3 -->
+                <article class="case-card">
+                    <img src="assets/caseStudy/mobileConversion.png" alt="">
+                    <div class="case-content light">
+                        <span>Technical Execution Case Study</span>
+                        <h3>Fixing Mobile UX Issues That Were</h3>
+                        <p>Killing Conversions..</p>
+                        <a href="case-studies/fixing-mobile-ux-issues-that-were-killing-conversions.html">Read more
+                            →</a>
+                    </div>
+                </article>
+
+                <!-- CARD 4 -->
+                <article class="case-card solid">
+                    <div class="case-content solid">
+                        <span>Revenue Growth Case Study</span>
+                        <h3>We Increased Conversion by 24%</h3>
+                        <p>for a $1.2M Shopify Store.</p>
+                        <a
+                            href="case-studies/we-increased-conversion-rate-on-a-1M-shopify-store-through-ux-first-redesign.html">Read
+                            more →</a>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <!-- Logo -->
-        <img src="assets/black-bg.png" alt="Olab Technologies Logo" class="footer-logo">
+    <!-- FOOTER -->
+    <footer class="mt-auto bg-neutral-900 text-neutral-400">
+        <div class="max-w-6xl mx-auto px-4 py-6
+             flex flex-col md:flex-row
+             items-center justify-between gap-4 text-sm">
 
-        <!-- Instagram -->
-        <div class="footer-social">
-            <a href="https://www.instagram.com/olab_softwares" target="_blank" aria-label="Olab Instagram">
-                <span>@olab_softwares</span>
-            </a>
+            <p>© 2026 Olab Technologies. All rights reserved.</p>
+
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-brand transition">Privacy</a>
+                <a href="#" class="hover:text-brand transition">Terms</a>
+                <a href="#" class="hover:text-brand transition">Support</a>
+            </div>
         </div>
-
-        <p class="footer-copy">&copy; 2023 - 2026 Olab Technologies. All rights reserved.</p>
     </footer>
 
-
+    <!-- JS -->
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        document.querySelectorAll('.cta-button, .secondary-button').forEach(button => {
-            button.addEventListener('mouseenter', function () {
-                this.style.transform = 'scale(1.05)';
-            });
-            button.addEventListener('mouseleave', function () {
-                this.style.transform = 'scale(1)';
-            });
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
         });
     </script>
     <script>
-        function openAuditForm() {
-            window.location.href = "contact-form.html";
+        const steps = document.querySelectorAll('.process-step');
+        const lineDesktop = document.getElementById('processLine');
+        const lineMobile = document.getElementById('processLineMobile');
+
+        let currentStep = 0;
+
+        function runProcess() {
+            steps.forEach(step => step.classList.remove('active'));
+            steps[currentStep].classList.add('active');
+
+            const progress = (currentStep / (steps.length - 1)) * 100;
+
+            // Desktop horizontal line
+            if (lineDesktop) {
+                lineDesktop.style.width = `${progress}%`;
+            }
+
+            // Mobile vertical line
+            if (lineMobile) {
+                lineMobile.style.height = `${progress}%`;
+            }
+
+            currentStep = (currentStep + 1) % steps.length;
         }
+
+        runProcess();
+        setInterval(runProcess, 2600);
     </script>
+
+    <script>
+        document.querySelectorAll('.case-card').forEach(card => {
+            card.addEventListener('click', () => {
+                if (window.matchMedia('(hover: none)').matches) {
+                    document.querySelectorAll('.case-card')
+                        .forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>

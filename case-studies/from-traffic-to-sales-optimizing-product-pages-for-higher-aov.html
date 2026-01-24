@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | Olab Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        creative: ['Unbounded', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#EEF2FF',
+                            DEFAULT: '#6366F1',
+                            dark: '#4338CA'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <header class="bg-white/70 backdrop-blur-md border-b border-neutral-200">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+
+            <a href="https://olab-tech.com/" class="flex items-center">
+                <img src="assets/white-bg.png" alt="MyWebsite Logo" class="h-8 w-auto object-contain" />
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <!-- <a href="#" class="hover:text-brand transition">About</a>
+                <a href="#" class="hover:text-brand transition">Services</a>
+                <a href="#" class="hover:text-brand transition">Contact</a> -->
+
+                <a href="#" class="ml-4 inline-flex items-center justify-center rounded-full
+                 bg-brand text-white
+                 px-5 py-2 text-sm font-medium
+                 shadow-sm shadow-brand/20
+                 hover:bg-brand-dark hover:shadow-md
+                 transition-all duration-300">
+                    Get Started
+                </a>
+            </nav>
+
+            <button id="menuBtn" class="md:hidden inline-flex items-center justify-center
+               w-10 h-10 rounded-full
+               bg-neutral-100 hover:bg-neutral-200
+               active:scale-95 transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-neutral-200">
+            <nav class="flex flex-col px-4 py-4 space-y-3 text-sm font-medium">
+                <!-- <a href="#" class="hover:text-brand transition">About</a>
+                <a href="#" class="hover:text-brand transition">Services</a>
+                <a href="#" class="hover:text-brand transition">Contact</a> -->
+
+                <a href="#" class="mt-2 inline-flex items-center justify-center rounded-full
+                 bg-brand text-white
+                 px-5 py-2 font-medium
+                 shadow-sm hover:shadow-md
+                 hover:bg-brand-dark transition">
+                    Get Started
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <header class="py-16 px-6 max-w-7xl mx-auto">
+        <div class="max-w-3xl">
+            <span class="text-blue-600 font-bold tracking-widest uppercase text-sm">Case Study: Product Page
+                Optimization</span>
+            <h1 class="text-5xl md:text-6xl font-black mt-4 leading-tight">From Traffic to Sales: Increasing AOV through
+                <span class="text-blue-600">Execution.</span>
+            </h1>
+            <p class="mt-6 text-xl text-slate-600 leading-relaxed">We don't chase trends. We fix the bottlenecks that
+                prevent your $1M+ store from scaling further.</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div
+                class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-8">
+                    <div class="bg-blue-50 text-blue-700 font-bold text-xs uppercase px-3 py-1 rounded-full w-fit mb-4">
+                        Shopify Optimization</div>
+                    <h3 class="text-2xl font-bold mb-3">The "Bundle & Save" Strategy</h3>
+                    <p class="text-slate-600 mb-6 italic">Scaling a high-growth skincare brand past $45 AOV.</p>
+
+                    <div class="space-y-4 border-t border-slate-100 pt-6">
+                        <div>
+                            <span class="block font-bold text-slate-900">The Problem</span>
+                            <p class="text-sm text-slate-600 font-medium">High traffic, but customers only bought one
+                                "hero" product.</p>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-slate-900">Olab Execution</span>
+                            <ul class="text-sm text-slate-600 list-disc ml-4 space-y-1 mt-1">
+                                <li>Dynamic "Buy More, Save More" widget</li>
+                                <li>Thumb-first sticky "Add-to-Cart"</li>
+                                <li>Eliminated 1.8s of loading lag</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-blue-600 p-4 rounded-xl text-white">
+                        <div class="text-sm opacity-80 uppercase font-bold tracking-wide">Result</div>
+                        <div class="text-3xl font-black">+32% AOV Increase</div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-8">
+                    <div
+                        class="bg-green-50 text-green-700 font-bold text-xs uppercase px-3 py-1 rounded-full w-fit mb-4">
+                        WooCommerce Overhaul</div>
+                    <h3 class="text-2xl font-bold mb-3">Modular PDP Performance</h3>
+                    <p class="text-slate-600 mb-6 italic">Home decor store struggling with mobile bounce rates.</p>
+
+                    <div class="space-y-4 border-t border-slate-100 pt-6">
+                        <div>
+                            <span class="block font-bold text-slate-900">The Problem</span>
+                            <p class="text-sm text-slate-600 font-medium">Desktop-heavy design caused "information
+                                overload" on mobile.</p>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-slate-900">Olab Execution</span>
+                            <ul class="text-sm text-slate-600 list-disc ml-4 space-y-1 mt-1">
+                                <li>React-based modular scannable layout</li>
+                                <li>Intelligent "Mini-Cart" slide-out upsells</li>
+                                <li>Optimized CSS3/JS for high-res imagery</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-slate-900 p-4 rounded-xl text-white">
+                        <div class="text-sm opacity-80 uppercase font-bold tracking-wide">Result</div>
+                        <div class="text-3xl font-black">+45% Mobile Revenue</div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-8">
+                    <div
+                        class="bg-purple-50 text-purple-700 font-bold text-xs uppercase px-3 py-1 rounded-full w-fit mb-4">
+                        Shopify Plus</div>
+                    <h3 class="text-2xl font-bold mb-3">The Scarcity Engine</h3>
+                    <p class="text-slate-600 mb-6 italic">Sustainable apparel brand with stagnant LTV.</p>
+
+                    <div class="space-y-4 border-t border-slate-100 pt-6">
+                        <div>
+                            <span class="block font-bold text-slate-900">The Problem</span>
+                            <p class="text-sm text-slate-600 font-medium">Customers weren't exploring collections; pages
+                                felt static.</p>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-slate-900">Olab Execution</span>
+                            <ul class="text-sm text-slate-600 list-disc ml-4 space-y-1 mt-1">
+                                <li>"Complete the Look" data-driven cross-sells</li>
+                                <li>Real-time low stock inventory alerts</li>
+                                <li>One-click post-purchase upsell scripts</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-blue-600 p-4 rounded-xl text-white">
+                        <div class="text-sm opacity-80 uppercase font-bold tracking-wide">Result</div>
+                        <div class="text-3xl font-black">+19% AOV in 30 Days</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section id="contact" class="bg-slate-900 py-20 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-black text-white mb-6">Ready for Execution?</h2>
+            <p class="text-slate-400 text-lg mb-10">We manage stores with $1M+ annual revenue. No fluff. Just results.
+            </p>
+            <a href="https://olab-tech.com"
+                class="bg-blue-600 text-white px-10 py-4 rounded-full font-black text-lg hover:scale-105 transition-transform inline-block">Work
+                with Olab Technologies</a>
+        </div>
+    </section>
+
+    <footer class="mt-auto bg-neutral-900 text-neutral-400">
+        <div class="max-w-6xl mx-auto px-4 py-6
+             flex flex-col md:flex-row
+             items-center justify-between gap-4 text-sm">
+
+            <p>© 2026 MyWebsite. All rights reserved.</p>
+
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-brand transition">Privacy</a>
+                <a href="#" class="hover:text-brand transition">Terms</a>
+                <a href="#" class="hover:text-brand transition">Support</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
