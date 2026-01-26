@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="https://olab-tech.com/assets/icon-black-bg.png">
+
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Unbounded Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SEO generic Start -->
+    <title> Shopify & WooCommerce Conversion Optimization Agency | Olab Technologies</title>
+
+    <!-- Meta Tags -->
+    <meta name="description"
+        content="Olab Technologies is a Shopify & WooCommerce conversion optimization agency focused on UX, performance, and revenue growth through clean execution.">
+
+    <meta name="keywords"
+        content="Shopify conversion optimization, WooCommerce optimization, eCommerce CRO agency, Shopify UX design, Olab Technologies">
+
+    <meta property="og:title" content="Shopify & WooCommerce Conversion Optimization Agency | Olab Technologies">
+    <meta property="og:description"
+        content="We design, optimize, and scale Shopify & WooCommerce stores with conversion-focused UX and clean execution.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://olab-tech.com/">
+    <meta property="og:image" content="https://olab-tech.com/assets/icon-black-bg.png">
+
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://olab-tech.com/">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shopify & WooCommerce CRO Agency | Olab Technologies">
+    <meta name="twitter:description"
+        content="Conversion-focused Shopify & WooCommerce execution that helps eCommerce brands sell more.">
+    <meta name="twitter:image" content="https://olab-tech.com/assets/icon-black-bg.png">
+
+
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        creative: ['Unbounded', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#EEF2FF',
+                            DEFAULT: '#6366F1',
+                            dark: '#4338CA'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .client-card {
+            @apply flex items-center justify-center h-24 rounded-xl bg-white border border-neutral-200 shadow-sm;
+        }
+
+        .client-logo {
+            @apply max-h-10 w-auto object-contain grayscale opacity-80 transition;
+        }
+
+        .client-card:hover .client-logo {
+            @apply grayscale-0 opacity-100;
+        }
+
+        @keyframes scrollY {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+
+        .animate-scroll-slow {
+            animation: scrollY 30s linear infinite;
+        }
+
+        .animate-scroll-medium {
+            animation: scrollY 24s linear infinite;
+        }
+
+        .animate-scroll-fast {
+            animation: scrollY 18s linear infinite;
+        }
+
+        .animate-scroll-slower {
+            animation: scrollY 36s linear infinite;
+        }
+    </style>
+
+    <style>
+        .client-card {
+            @apply flex items-center justify-center h-24 rounded-xl bg-white border border-neutral-200 shadow-sm;
+        }
+
+        .client-logo {
+            @apply max-h-10 w-auto object-contain grayscale opacity-80 transition;
+        }
+
+        .client-card:hover .client-logo {
+            @apply grayscale-0 opacity-100;
+        }
+    </style>
+
+    <style>
+        /* PROCESS STEP BASE */
+        .process-step {
+            opacity: 0.5;
+            transform: translateY(8px);
+            transition: all 0.5s ease;
+        }
+
+        .process-step.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* PROCESS DOT (shared desktop + mobile) */
+        .process-dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 9999px;
+            background: #6366F1;
+            /* brand */
+            box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.6);
+            transition: all 0.4s ease;
+        }
+
+        /* Desktop dot position */
+        @media (min-width: 768px) {
+            .process-dot {
+                top: 0;
+                left: 0;
+            }
+        }
+
+        /* Mobile dot position (vertical timeline) */
+        @media (max-width: 767px) {
+            .process-dot {
+                top: 0;
+                left: 0;
+            }
+        }
+
+        /* Active glow */
+        .process-step.active .process-dot {
+            background: #A78BFA;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Pulse animation */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.6);
+            }
+
+            70% {
+                box-shadow: 0 0 0 14px rgba(167, 139, 250, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(167, 139, 250, 0);
+            }
+        }
+
+        /* MOBILE TEXT STYLES */
+        .process-mobile h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .process-mobile p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #a1a1aa;
+            transition: color 0.3s ease;
+        }
+
+        /* Active mobile text */
+        .process-mobile.active h3 {
+            color: #c4b5fd;
+        }
+
+        .process-mobile.active p {
+            color: #e5e7eb;
+        }
+    </style>
+
+
+    <style>
+        .auto-glow {
+            position: relative;
+            transition: all 0.3s ease;
+            animation: glowFlow 4s infinite ease-in-out;
+        }
+
+        /* Glow animation */
+        @keyframes glowFlow {
+            0% {
+                box-shadow: 0 0 0 rgba(99, 102, 241, 0);
+                border-color: #e5e7eb;
+                transform: translateY(0);
+            }
+
+            20% {
+                box-shadow: 0 0 40px rgba(99, 102, 241, 0.35);
+                border-color: rgb(99, 102, 241);
+                transform: translateY(-4px);
+            }
+
+            40% {
+                box-shadow: 0 0 0 rgba(99, 102, 241, 0);
+                border-color: #e5e7eb;
+                transform: translateY(0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 rgba(99, 102, 241, 0);
+                border-color: #e5e7eb;
+            }
+        }
+
+        /* Staggered flow */
+        .glow-1 {
+            animation-delay: 0s;
+        }
+
+        .glow-2 {
+            animation-delay: 1s;
+        }
+
+        .glow-3 {
+            animation-delay: 2s;
+        }
+
+        .glow-4 {
+            animation-delay: 3s;
+        }
+
+        /* Hover overrides auto glow */
+        .auto-glow:hover {
+            animation-play-state: paused;
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.35);
+            border-color: rgb(99, 102, 241);
+            transform: translateY(-6px);
+        }
+    </style>
+    <style>
+        .tech-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-radius: 0.75rem;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+        }
+
+        .auto-glow-tech {
+            animation: techGlowFlow 8s infinite ease-in-out;
+            transition: all 0.3s ease;
+        }
+
+        /* Softer glow */
+        @keyframes techGlowFlow {
+            0% {
+                box-shadow: 0 0 0 rgba(99, 102, 241, 0);
+                border-color: #e5e7eb;
+                transform: translateY(0);
+            }
+
+            15% {
+                box-shadow: 0 0 25px rgba(99, 102, 241, 0.25);
+                border-color: rgb(99, 102, 241);
+                transform: translateY(-2px);
+            }
+
+            30% {
+                box-shadow: 0 0 0 rgba(99, 102, 241, 0);
+                border-color: #e5e7eb;
+                transform: translateY(0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 rgba(99, 102, 241, 0);
+            }
+        }
+
+        /* Staggered flow */
+        .glow-1 {
+            animation-delay: 0s;
+        }
+
+        .glow-2 {
+            animation-delay: 1s;
+        }
+
+        .glow-3 {
+            animation-delay: 2s;
+        }
+
+        .glow-4 {
+            animation-delay: 3s;
+        }
+
+        .glow-5 {
+            animation-delay: 4s;
+        }
+
+        .glow-6 {
+            animation-delay: 5s;
+        }
+
+        .glow-7 {
+            animation-delay: 6s;
+        }
+
+        .glow-8 {
+            animation-delay: 7s;
+        }
+
+        /* Hover overrides auto glow */
+        .auto-glow-tech:hover {
+            animation-play-state: paused;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+            border-color: rgb(99, 102, 241);
+            transform: translateY(-4px);
+        }
+    </style>
+
+    <style>
+        /* BASE */
+        .case-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        /* IMAGE */
+        .case-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        /* CONTENT */
+        .case-content {
+            padding: 1.5rem;
+        }
+
+        .case-content span {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-content p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .case-content a {
+            font-weight: 600;
+        }
+
+        /* THEMES */
+        .case-content.dark {
+            background: #000;
+            color: #fff;
+        }
+
+        .case-content.dark span,
+        .case-content.dark a {
+            color: #a3e635;
+        }
+
+        .case-content.light span,
+        .case-content.light a {
+            color: #6366f1;
+        }
+
+        .case-card.solid {
+            background: #fed7aa;
+        }
+
+        .case-card.solid .case-content {
+            height: 100%;
+        }
+
+        /* ---------- DESKTOP ENHANCEMENTS ---------- */
+        @media (min-width: 768px) {
+            .case-card {
+                perspective: 1000px;
+                transition: transform 0.4s ease;
+            }
+
+            .case-card:hover {
+                transform: translateY(-6px);
+            }
+
+            .case-card:hover img {
+                transform: scale(1.06);
+            }
+
+            .case-card img {
+                transition: transform 0.6s ease;
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col bg-neutral-50 text-neutral-900 overflow-x-hidden">
+    <!-- HEADER -->
+    <header class="bg-white/70 backdrop-blur-md border-b border-neutral-200">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+
+            <a href="/" class="flex items-center">
+                <img src="assets/white-bg.png" alt="Olab Technologies Logo" class="h-8 w-auto object-contain" />
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <!-- <a href="#" class="hover:text-brand transition">About</a>
+                <a href="#" class="hover:text-brand transition">Services</a>
+                <a href="#" class="hover:text-brand transition">Contact</a> -->
+
+                <a href="/contact-form.html" class="ml-4 inline-flex items-center justify-center rounded-full
+                 bg-brand text-white
+                 px-5 py-2 text-sm font-medium
+                 shadow-sm shadow-brand/20
+                 hover:bg-brand-dark hover:shadow-md
+                 transition-all duration-300">
+                    Get Started
+                </a>
+            </nav>
+
+            <button id="menuBtn" class="md:hidden inline-flex items-center justify-center
+               w-10 h-10 rounded-full
+               bg-neutral-100 hover:bg-neutral-200
+               active:scale-95 transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-neutral-200">
+            <nav class="flex flex-col px-4 py-4 space-y-3 text-sm font-medium">
+                <!-- <a href="#" class="hover:text-brand transition">About</a>
+                <a href="#" class="hover:text-brand transition">Services</a>
+                <a href="#" class="hover:text-brand transition">Contact</a> -->
+
+                <a href="/contact-form.html" class="mt-2 inline-flex items-center justify-center rounded-full
+                 bg-brand text-white
+                 px-5 py-2 font-medium
+                 shadow-sm hover:shadow-md
+                 hover:bg-brand-dark transition">
+                    Get Started
+                </a>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!-- HERO -->
+    <section class="relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 pt-24 pb-12 text-center relative z-10">
+
+            <p class="text-sm md:text-base font-medium text-neutral-600">
+                B2B teams don’t need more traffic.
+            </p>
+
+            <h1 class="mt-6 font-creative font-extrabold
+      text-5xl md:text-6xl lg:text-7xl
+      leading-tight tracking-tight">
+                <span class="text-neutral-900">Landing Pages</span>
+                <span class="block mt-2 bg-clip-text text-transparent
+        bg-gradient-to-r from-brand to-brand-dark">
+                    That Generate Leads
+                </span>
+            </h1>
+
+            <p class="mt-8 text-lg md:text-xl text-neutral-700 font-medium">
+                We design & build <span class="font-semibold text-neutral-900">
+                    custom B2B landing pages
+                </span> focused on conversion.
+            </p>
+
+            <p class="mt-6 max-w-2xl mx-auto text-sm md:text-base text-neutral-600">
+                No templates. No guesswork.
+                Just clean execution that turns clicks into
+                <span class="font-semibold text-brand">qualified leads</span>.
+            </p>
+
+            <!-- Authority Proof -->
+            <div class="mt-10 flex justify-center">
+                <div class="inline-flex items-center gap-3
+        rounded-full border border-neutral-200
+        bg-white/70 backdrop-blur
+        px-6 py-3 text-sm text-neutral-700 shadow-sm">
+
+                    <span class="relative inline-flex h-2.5 w-2.5">
+                        <span
+                            class="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping"></span>
+                        <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500"></span>
+                    </span>
+
+                    <span>
+                        Used by B2B teams running
+                        <span class="font-semibold text-neutral-900">
+                            paid & outbound campaigns
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="mt-12 flex justify-center">
+                <a href="/contact-form.html" class="inline-flex items-center justify-center rounded-full
+        bg-neutral-900 text-white
+        px-10 py-4 text-sm font-semibold
+        hover:bg-neutral-800 transition">
+                    Build My Landing Page
+                </a>
+            </div>
+        </div>
+
+        <!-- Background accents -->
+        <div class="absolute -top-40 -left-40 h-[500px] w-[500px]
+    rounded-full bg-brand/15 blur-3xl"></div>
+        <div class="absolute top-1/3 -right-40 h-[500px] w-[500px]
+    rounded-full bg-brand-dark/15 blur-3xl"></div>
+    </section>
+
+
+    <!-- WHAT WE DO -->
+    <section class="relative bg-neutral-50 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+
+            <div class="max-w-2xl mx-auto text-center mb-12">
+                <p class="text-sm uppercase tracking-widest text-neutral-500 font-semibold">
+                    Our Service
+                </p>
+                <h2 class="mt-3 text-3xl md:text-4xl font-creative font-bold text-neutral-900">
+                    B2B Landing Page Execution
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+                <div class="group auto-glow glow-1 p-6 rounded-2xl bg-white border">
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-brand">
+                        Custom Page Strategy
+                    </h3>
+                    <p class="text-neutral-600">
+                        Messaging, structure, and flow built around your ICP, offer, and traffic source.
+                    </p>
+                </div>
+
+                <div class="group auto-glow glow-2 p-6 rounded-2xl bg-white border">
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-brand">
+                        Conversion-Focused Design
+                    </h3>
+                    <p class="text-neutral-600">
+                        Layouts engineered to guide attention and push visitors toward action.
+                    </p>
+                </div>
+
+                <div class="group auto-glow glow-3 p-6 rounded-2xl bg-white border">
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-brand">
+                        Lead Capture & Forms
+                    </h3>
+                    <p class="text-neutral-600">
+                        Optimized forms, CTAs, and trust elements to improve submission quality.
+                    </p>
+                </div>
+
+                <div class="group auto-glow glow-4 p-6 rounded-2xl bg-white border">
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-brand">
+                        Fast & Scalable Builds
+                    </h3>
+                    <p class="text-neutral-600">
+                        Clean code, fast load times, and easy iteration for testing and scaling.
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="mt-12 text-center text-neutral-600">
+                Built for paid ads, outbound, SEO, and direct sales funnels.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="relative bg-[#0B0F1A] py-20 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+
+            <div class="max-w-2xl mx-auto text-center mb-16">
+                <p class="text-sm uppercase tracking-widest text-neutral-400 font-semibold">
+                    Process
+                </p>
+                <h2 class="mt-3 text-3xl md:text-4xl font-creative font-bold text-white">
+                    Simple. Fast. Effective.
+                </h2>
+            </div>
+
+            <div class="hidden md:grid grid-cols-4 gap-10 relative">
+
+                <div class="absolute top-6 left-0 w-full h-[2px] bg-neutral-700"></div>
+                <div id="processLine" class="absolute top-6 left-0 h-[2px] w-0
+        bg-gradient-to-r from-brand via-purple-400 to-brand-dark transition-all">
+                </div>
+
+                <div class="relative process-step" data-step="0">
+                    <div class="process-dot"></div>
+                    <h3 class="mt-10 text-lg font-semibold text-white">
+                        Discovery
+                    </h3>
+                    <p class="mt-3 text-sm text-neutral-400">
+                        We understand your offer, ICP, and traffic source.
+                    </p>
+                </div>
+
+                <div class="relative process-step" data-step="1">
+                    <div class="process-dot"></div>
+                    <h3 class="mt-10 text-lg font-semibold text-white">
+                        Wireframe & Copy Flow
+                    </h3>
+                    <p class="mt-3 text-sm text-neutral-400">
+                        Page structure designed for clarity and conversions.
+                    </p>
+                </div>
+
+                <div class="relative process-step" data-step="2">
+                    <div class="process-dot"></div>
+                    <h3 class="mt-10 text-lg font-semibold text-white">
+                        Build & Design
+                    </h3>
+                    <p class="mt-3 text-sm text-neutral-400">
+                        High-fidelity design and clean implementation.
+                    </p>
+                </div>
+
+                <div class="relative process-step" data-step="3">
+                    <div class="process-dot"></div>
+                    <h3 class="mt-10 text-lg font-semibold text-white">
+                        Launch & Iterate
+                    </h3>
+                    <p class="mt-3 text-sm text-neutral-400">
+                        Deploy, test, and refine for better lead quality.
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="mt-16 text-center text-neutral-400">
+                Built for speed. Optimized for results.
+            </p>
+
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="mt-auto bg-neutral-900 text-neutral-400">
+        <div class="max-w-6xl mx-auto px-4 py-6
+                   flex flex-col md:flex-row
+                   items-center justify-between gap-4 text-sm">
+
+            <!-- LEFT -->
+            <p>© 2026 Olab Technologies. All rights reserved.</p>
+
+            <!-- RIGHT -->
+            <div class="flex items-center gap-6">
+
+                <!-- Links -->
+                <div class="flex space-x-4">
+                    <a href="/privacy-terms.html" class="hover:text-brand transition">Privacy</a>
+                    <a href="/support.html" class="hover:text-brand transition">Support</a>
+                </div>
+
+                <!-- Divider -->
+                <span class="hidden md:block h-4 w-px bg-neutral-700"></span>
+
+                <!-- Social Icons -->
+                <div class="flex items-center space-x-4">
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/olab_softwares/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Olab Technologies on Instagram" class="hover:text-brand transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5a4.25 4.25 0 00-4.25-4.25h-8.5z" />
+                            <path d="M12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z" />
+                            <circle cx="17.25" cy="6.75" r="1" />
+                        </svg>
+                    </a>
+
+                    <!-- Twitter / X -->
+                    <a href="https://x.com/olab-tech-1" target="_blank" rel="noopener noreferrer"
+                        aria-label="Olab Technologies on Twitter" class="hover:text-brand transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2H21l-6.417 7.337L22.5 22h-6.636l-5.2-6.744L4.8 22H2l6.874-7.866L1.5 2h6.792l4.7 6.108L18.244 2zm-1.163 18h1.835L7.92 4H6.03l11.05 16z" />
+                        </svg>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/company/olab_softwares/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Olab Technologies on LinkedIn" class="hover:text-brand transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M4.98 3.5a2.48 2.48 0 110 4.96 2.48 2.48 0 010-4.96zM3 9h3.96v12H3zM9.04 9H13v1.64h.06c.55-1.04 1.9-2.14 3.9-2.14 4.18 0 4.95 2.75 4.95 6.32V21h-3.96v-5.44c0-1.3-.02-2.97-1.81-2.97-1.82 0-2.1 1.42-2.1 2.88V21H9.04z" />
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+    <script>
+        const steps = document.querySelectorAll('.process-step');
+        const lineDesktop = document.getElementById('processLine');
+        const lineMobile = document.getElementById('processLineMobile');
+
+        let currentStep = 0;
+
+        function runProcess() {
+            steps.forEach(step => step.classList.remove('active'));
+            steps[currentStep].classList.add('active');
+
+            const progress = (currentStep / (steps.length - 1)) * 100;
+
+            // Desktop horizontal line
+            if (lineDesktop) {
+                lineDesktop.style.width = `${progress}%`;
+            }
+
+            // Mobile vertical line
+            if (lineMobile) {
+                lineMobile.style.height = `${progress}%`;
+            }
+
+            currentStep = (currentStep + 1) % steps.length;
+        }
+
+        runProcess();
+        setInterval(runProcess, 2600);
+    </script>
+
+    <script>
+        document.querySelectorAll('.case-card').forEach(card => {
+            card.addEventListener('click', () => {
+                if (window.matchMedia('(hover: none)').matches) {
+                    document.querySelectorAll('.case-card')
+                        .forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
